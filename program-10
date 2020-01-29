@@ -1,0 +1,41 @@
+//concept of default, parameterized, copy constructors, constructor overloading//
+#include<iostream>
+using namespace std;
+class Test
+{
+	int a,b;
+	public:
+		Test()
+		{
+			a=0;
+			b=0;
+			cout<<"default constructor called..";
+		}
+		Test(int x)
+		{
+			a=x;
+			b=0;
+			cout<<"constructor with 1 parameter called..";
+		}
+		Test(int x,int y)
+		{
+			a=x;
+			b=y;
+			cout<<"constructor with 2 parameter called..";
+		}
+		void disp(void)
+		{
+			cout<<"A="<<a<<endl;
+			cout<<"B="<<b<<endl;
+		}	
+};
+int main()
+{
+	Test t1;
+	t1.disp();
+	Test t2(6);
+	t2.disp();
+	Test t3(3,9);
+	t3.disp();
+	return 0;
+}
