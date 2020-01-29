@@ -1,0 +1,21 @@
+//use of inline function to calculate the square of number//
+#include<iostream>
+using namespace std;
+class power
+{
+	public:
+		inline int square(int n)
+		{
+			return (n*n);
+		}
+};
+int main()
+{
+	int n,r;
+	power p;
+	cout<<"enter the number :";
+	cin>>n;
+	r=p.square(n);
+	cout<<"square of given number is "<<r<<endl;
+	return 0;
+}
