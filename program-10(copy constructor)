@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class Student
+{
+	string first_name,last_name;
+	public:
+		Student(string f,string l)
+		{
+			first_name=f;
+			last_name=l;
+		}
+		Student( const Student &s)
+		{
+			first_name=s.first_name;
+			last_name=s.last_name;
+		}
+		void disp()
+		{
+			cout<<"first name is" <<first_name<<endl;
+			cout<<"last name is "<<last_name<<endl; 
+		}
+};
+int main()
+{ 
+  string a,b;
+  cout<<"enter first and last name"<<endl;
+  cin>>a>>b;
+Student s1(a,b);
+s1.disp();
+Student s2(s1);
+s2.disp();
+return 0;
+}
