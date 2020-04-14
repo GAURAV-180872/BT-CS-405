@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class Test{
+	int num;
+	public:
+		void input();
+		void check();
+};
+void Test::input()
+{
+	cout << "Enter a Number :";
+    cin>>num;
+}
+void Test::check()
+{
+	  if (num % 2 == 0) {
+            cout << "Number is Even :" << num;
+        } else {
+            cout << "Number is Odd :" << num;
+        }
+
+}
+int main(){
+	Test obj;
+	obj.input();
+	obj.check();
+	return 0;
+}
