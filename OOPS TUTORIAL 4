@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class Matrix
+{
+	int a[10],i;
+	public:
+		void input();
+		void show();
+};
+void Matrix::input()
+{
+	cout<<"enter the elements";
+	for(i=0;i<10;i++)
+	cin>>a[i];
+	
+}
+void Matrix::show()
+{
+	cout<<"display of matrix is"<<endl;
+	for(i=0;i<10;i++)
+	cout<<a[i]<<endl;
+	
+}
+int main()
+{\
+Matrix obj;
+obj.input();
+obj.show();
+return 0;
+}
