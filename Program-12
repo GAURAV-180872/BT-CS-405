@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+class M
+{
+	protected:
+    int a;
+    public:
+     void get_a(int x)
+    {
+    	a=x;
+	}
+};
+class N
+{
+	protected:
+	int b;
+	public:
+		void get_b(int y)
+		{
+			b=y;
+		}
+};
+class Multiply: public M, public N
+{
+	public:
+		void display()
+		{
+			cout<<"a="<<a<<"\n";
+			cout<<"b="<<b<<"\n";
+			cout<<"a*b="<<a*b<<"\n";
+		}
+};
+int main()
+{
+	Multiply obj;
+	obj.get_a(40);
+	obj.get_b(50);
+	obj.display();
+	return 0;
+}
